@@ -115,6 +115,7 @@
             this.btnTraCuuDiemThi.Text = "TRA CỨU ĐIỂM THI";
             this.btnTraCuuDiemThi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTraCuuDiemThi.UseVisualStyleBackColor = false;
+            this.btnTraCuuDiemThi.Click += new System.EventHandler(this.btnTraCuuDiemThi_Click);
             // 
             // btnQuanLyDiemThi
             // 

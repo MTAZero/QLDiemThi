@@ -68,6 +68,12 @@
     <Compile Include="Data\DoiTuongDuThi.cs" />
     <Compile Include="Data\QLDiemThi.cs" />
     <Compile Include="Data\SinhVien.cs" />
+    <Compile Include="GUI\FrmGetDoiTuongDuThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmGetDoiTuongDuThi.Designer.cs">
+      <DependentUpon>FrmGetDoiTuongDuThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,12 @@
     <Compile Include="GUI\FrmThemSinhvien.Designer.cs">
       <DependentUpon>FrmThemSinhvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FrmTraCuuDiemThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmTraCuuDiemThi.Designer.cs">
+      <DependentUpon>FrmTraCuuDiemThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmXoaDTUT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,9 @@
     <Compile Include="Helper\StringHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\FrmGetDoiTuongDuThi.resx">
+      <DependentUpon>FrmGetDoiTuongDuThi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmThemSinhvien.resx">
       <DependentUpon>FrmThemSinhvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmTraCuuDiemThi.resx">
+      <DependentUpon>FrmTraCuuDiemThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmXoaDTUT.resx">
       <DependentUpon>FrmXoaDTUT.cs</DependentUpon>

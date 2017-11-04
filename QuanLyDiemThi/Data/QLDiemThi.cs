@@ -13,6 +13,7 @@ namespace QuanLyDiemThi
         public static List<DiemThi> DiemThis = new List<DiemThi>();
         public static List<DoiTuongDuThi> DoiTuongDuThis = new List<DoiTuongDuThi>();
         public static List<SinhVien> SinhViens = new List<SinhVien>();
+        public static int IDDoiTuongDuThi = 0;
 
         // sinh vien
         public static bool ImportSinhViens(string FileName, ref string Error)

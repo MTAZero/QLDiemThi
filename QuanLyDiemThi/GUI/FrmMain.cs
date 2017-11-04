@@ -59,5 +59,15 @@ namespace QuanLyDiemThi
             form.Show();
         }
         #endregion
+
+        private void btnTraCuuDiemThi_Click(object sender, EventArgs e)
+        {
+            FrmTraCuuDiemThi form = new FrmTraCuuDiemThi();
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(form);
+            form.Show();
+        }
     }
 }
