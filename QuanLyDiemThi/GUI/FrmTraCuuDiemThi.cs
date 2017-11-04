@@ -539,6 +539,8 @@ namespace QuanLyDiemThi.GUI
                 using (StreamWriter sw = new StreamWriter(a.FileName))
                 {
                     sw.WriteLine(txtMain.Text);
+
+                    MessageBox.Show("Lưu file thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
