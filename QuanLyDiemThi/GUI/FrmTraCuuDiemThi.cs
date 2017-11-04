@@ -69,7 +69,7 @@ namespace QuanLyDiemThi.GUI
                         from doituong in DB.DoiTuongDuThis
                         from sv in DB.SinhViens.Where(p => p.DTUT == doituong.ID)
                         from diem in DB.DiemThis.Where(p => p.SBD == sv.SBD)
-                        orderby -(diem.Toan + diem.Van + diem.Anh)
+                        orderby -(diem.Toan + diem.Van + diem.Anh + doituong.DiemUT)
                         select new
                         {
                             SBD = sv.SBD,
@@ -146,7 +146,7 @@ namespace QuanLyDiemThi.GUI
                         from sv in DB.SinhViens.Where(p => p.DTUT == doituong.ID)
                         from diem in DB.DiemThis.Where(p => p.SBD == sv.SBD)
                         where diem.Toan == 10 || diem.Van == 10 || diem.Anh == 10
-                        orderby -(diem.Toan + diem.Van + diem.Anh)
+                        orderby -(diem.Toan + diem.Van + diem.Anh + doituong.DiemUT)
                         select new
                         {
                             SBD = sv.SBD,
@@ -224,7 +224,7 @@ namespace QuanLyDiemThi.GUI
                         from doituong in DB.DoiTuongDuThis
                         from sv in DB.SinhViens.Where(p => p.DTUT == doituong.ID)
                         from diem in DB.DiemThis.Where(p => p.SBD == sv.SBD)
-                        orderby -(diem.Toan + diem.Van + diem.Anh)
+                        orderby -(diem.Toan + diem.Van + diem.Anh + doituong.DiemUT)
                         select new
                         {
                             SBD = sv.SBD,
@@ -303,7 +303,7 @@ namespace QuanLyDiemThi.GUI
                         from doituong in DB.DoiTuongDuThis
                         from sv in DB.SinhViens.Where(p => p.DTUT == doituong.ID)
                         from diem in DB.DiemThis.Where(p => p.SBD == sv.SBD)
-                        orderby -(diem.Toan + diem.Van + diem.Anh)
+                        orderby -(diem.Toan + diem.Van + diem.Anh + doituong.DiemUT)
                         select new
                         {
                             SBD = sv.SBD,
@@ -386,7 +386,7 @@ namespace QuanLyDiemThi.GUI
                         from sv in DB.SinhViens.Where(p => p.DTUT == doituong.ID)
                         from diem in DB.DiemThis.Where(p => p.SBD == sv.SBD)
                         where doituong.ID == DB.IDDoiTuongDuThi
-                        orderby -(diem.Toan + diem.Van + diem.Anh)
+                        orderby -(diem.Toan + diem.Van + diem.Anh + doituong.DiemUT)
                         select new
                         {
                             SBD = sv.SBD,
@@ -463,7 +463,7 @@ namespace QuanLyDiemThi.GUI
                         from doituong in DB.DoiTuongDuThis
                         from sv in DB.SinhViens.Where(p => p.DTUT == doituong.ID)
                         from diem in DB.DiemThis.Where(p => p.SBD == sv.SBD)
-                        orderby -(diem.Toan + diem.Van + diem.Anh)
+                        orderby -(diem.Toan + diem.Van + diem.Anh + doituong.DiemUT)
                         select new
                         {
                             SBD = sv.SBD,
