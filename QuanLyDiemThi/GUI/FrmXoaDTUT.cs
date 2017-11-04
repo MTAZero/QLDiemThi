@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyDiemThi.GUI
 {
-    public partial class FrmXoaSinhVien : Form
+    public partial class FrmXoaDTUT : Form
     {
-        public FrmXoaSinhVien()
+        public FrmXoaDTUT()
         {
             InitializeComponent();
         }

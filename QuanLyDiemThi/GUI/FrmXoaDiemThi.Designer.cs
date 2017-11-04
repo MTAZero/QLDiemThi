@@ -1,6 +1,6 @@
 ﻿namespace QuanLyDiemThi.GUI
 {
-    partial class FrmXoaSinhVien
+    partial class FrmXoaDiemThi
     {
         /// <summary>
         /// Required designer variable.
