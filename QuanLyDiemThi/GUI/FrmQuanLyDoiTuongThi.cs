@@ -99,21 +99,21 @@ namespace QuanLyDiemThi.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            FrmThemSinhvien form = new FrmThemSinhvien();
+            FrmThemDTUT form = new FrmThemDTUT();
 
-            int n = DB.SinhViens.ToList().Count;
+            int n = DB.DoiTuongDuThis.ToList().Count;
             form.ShowDialog();
-            if (DB.SinhViens.ToList().Count != n)
+            if (DB.DoiTuongDuThis.ToList().Count != n)
                 LoadDsDTUT();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            FrmXoaSinhVien form = new FrmXoaSinhVien();
+            FrmXoaDTUT form = new FrmXoaDTUT();
 
-            int n = DB.SinhViens.ToList().Count;
+            int n = DB.DoiTuongDuThis.ToList().Count;
             form.ShowDialog();
-            if (DB.SinhViens.ToList().Count != n)
+            if (DB.DoiTuongDuThis.ToList().Count != n)
                 LoadDsDTUT();
         }
         #endregion

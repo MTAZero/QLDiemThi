@@ -27,23 +27,23 @@ namespace QuanLyDiemThi.GUI
             }
             catch
             {
-                MessageBox.Show("Số thứ tự của sinh viên bị xóa phải là số nguyên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Số thứ tự của đối tượng ưu tiên bị xóa phải là số nguyên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (index> DB.SinhViens.Count || index<1)
+            if (index> DB.DoiTuongDuThis.Count || index<1)
             {
-                MessageBox.Show("STT của sinh viên bị xóa phải nằm trong khoảng 0 đến số lượng sinh viên",
+                MessageBox.Show("STT của đối tượng ưu tiên bị xóa phải nằm trong khoảng 0 đến số lượng đối tượng ưu tiên",
                                 "Thông báo",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
                 return;
             }
 
-            SinhVien a = DB.SinhViens[index - 1];
-            DB.SinhViens.Remove(a);
+            DoiTuongDuThi a = DB.DoiTuongDuThis[index - 1];
+            DB.DoiTuongDuThis.Remove(a);
 
-            MessageBox.Show("Xóa thông tin sinh viên thành công",
+            MessageBox.Show("Xóa thông tin đối tượng ưu tiên thành công",
                             "Thông báo",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
