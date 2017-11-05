@@ -25,7 +25,7 @@ namespace QuanLyDiemThi.GUI
         private float gtnn(float a, float b, float c)
         {
             float ans = a;
-            if (a < b) ans = b;
+            if (a < b) ans = a; else ans = b;
             if (c < ans) ans = c;
             return ans;
         }
@@ -163,7 +163,7 @@ namespace QuanLyDiemThi.GUI
                             DoiTuongDT = doituong.ID
                         }
                      )
-                     .OrderBy(p => p.XepLoai)
+                     .OrderByDescending( p => p.XepLoai)
                      .ToList();
 
             txtMain.Text = "";
@@ -241,6 +241,7 @@ namespace QuanLyDiemThi.GUI
                             DoiTuongDT = doituong.ID
                         }
                      )
+                     .OrderBy(p=>p.DoiTuongDT)
                      .ToList();
 
             ds = ds.Where(p => p.XepLoai == "Trượt").ToList();
@@ -429,10 +430,16 @@ namespace QuanLyDiemThi.GUI
 
 
             str += s + Environment.NewLine;
+
+            int shs = 0, dau = 0, truot = 0;
+
             // thêm các cột
             int stt = 1;
             foreach (var item in ds)
             {
+                shs++;
+                if (item.XepLoai != "Trượt") dau++; else truot++;
+
                 s = "";
 
                 STT = StringHelper.StringWithLength((stt++).ToString(), 5);
@@ -453,6 +460,9 @@ namespace QuanLyDiemThi.GUI
 
                 str += s + Environment.NewLine;
             }
+
+            s= "Số học sinh trong đối tượng : "+shs+", Đậu : "+dau+" ("+(100*(float)dau/shs).ToString("0.00")+"%), Trượt : "+truot+" ("+(100 * (float)truot/shs).ToString("0.00")+"%)";
+            str += s + Environment.NewLine;
 
             txtMain.Text = str;
         }
